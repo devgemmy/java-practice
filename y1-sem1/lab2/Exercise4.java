@@ -28,7 +28,7 @@ public class Exercise4 {
 		}
 		
 		
-		/*
+		
 		for (int r = 1; r <= 1000; r++) {
 			if (r % 7 == 0 || r % 9 == 0) {
 				System.out.println(r + " is divisible by 7 or 9");
@@ -42,7 +42,7 @@ public class Exercise4 {
 				System.out.println(r + " is NOT divisible by 2, 3 and 5");
 			}
 		}
-		*/
+		
 		
 		// Running this program a 1000 times took seconds
 		
