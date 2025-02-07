@@ -1,15 +1,14 @@
-
-public class Dog {
+class Dog {
     // Instance variables
     private String name;
     private String breed;
     private int age;
 
     // Constructor
-    public Dog(String name, String breed, int age) {
-        this.name = name;
-        this.age = age;
-        this.breed = breed;
+    public Dog(String nm, String brd, int ag) {
+        nm = name;
+        ag = age;
+        brd = breed;
     }
 
     // Getters
@@ -17,3 +16,4 @@ public class Dog {
         System.out.println("Woof!");
     }
 }
+
