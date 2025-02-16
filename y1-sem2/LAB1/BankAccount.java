@@ -1,11 +1,11 @@
 public class BankAccount {
-    private double balance;
     private int accountNumber;
     private String accountHolderName;
+    private double balance;
 
-    public BankAccount(int accountN, String accountHN) {
-        accountNumber = accountN;
-        accountHolderName = accountHN;
+    public BankAccount(int acctNum, String acctHName) {
+        accountNumber = acctNum;
+        accountHolderName = acctHName;
         balance = 0;
     }
 

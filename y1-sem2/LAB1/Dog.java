@@ -6,12 +6,11 @@ class Dog {
 
     // Constructor
     public Dog(String nm, String brd, int ag) {
-        nm = name;
-        ag = age;
-        brd = breed;
+        name = nm;
+        breed = brd;
+        age = ag;
     }
 
-    // Getters
     public void bark() {
         System.out.println("Woof!");
     }

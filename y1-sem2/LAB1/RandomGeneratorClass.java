@@ -1,9 +1,23 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
 public class RandomGeneratorClass {
 
+    public static void main(String[] args) {
+        ArrayList<Integer> RandomArrayList = new ArrayList<Integer>();
 
-    public RandomGeneratorClass() {
-
+        for (int a = 0; a < 20; a++) {
+            RandomArrayList.add(RandomGeneratorMethod());
+        }
+        Collections.sort(RandomArrayList);
+        System.out.println("Random numbers: " + RandomArrayList);
     }
 
-    public void RandomGeneratorMethod()
+    public static int RandomGeneratorMethod() {
+        Random randoms = new Random();
+        // (max - min + 1) + min
+        return randoms.nextInt(300 - 30 + 1) + 30;
+    }
+
 }
