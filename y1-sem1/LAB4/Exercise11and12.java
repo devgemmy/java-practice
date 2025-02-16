@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Exercise11 {
+public class Exercise11and12 {
 
     public static void main(String[] args) {
         System.out.println("Lab 4 - Exercise 11 \n");
