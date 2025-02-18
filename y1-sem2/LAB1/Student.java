@@ -25,7 +25,7 @@ public class Student {
     public char[] determineGrade() {
         char[] testGrades = new char[testScores.length];
         for (int scr = 0; scr < testScores.length; scr++) {
-            if (testScores[scr] >= 90) {
+            if (testScores[scr] >= 90 && testScores[scr] <= 100) {
                 testGrades[scr] = 'A';
             } else if (testScores[scr] >= 80 && testScores[scr] <= 89) {
                 testGrades[scr] = 'B';
