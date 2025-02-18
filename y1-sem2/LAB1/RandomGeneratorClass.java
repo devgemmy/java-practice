@@ -3,6 +3,11 @@ import java.util.Collections;
 import java.util.Random;
 
 public class RandomGeneratorClass {
+    private String name;
+
+    public RandomGeneratorClass(String naming) {
+        name = naming;
+    }
 
     public static void main(String[] args) {
         ArrayList<Integer> RandomArrayList = new ArrayList<Integer>();
@@ -11,7 +16,7 @@ public class RandomGeneratorClass {
             RandomArrayList.add(RandomGeneratorMethod());
         }
         Collections.sort(RandomArrayList);
-        System.out.println("Random numbers: " + RandomArrayList);
+        System.out.println("Random nums from RGClass: " + RandomArrayList);
     }
 
     public static int RandomGeneratorMethod() {
@@ -21,3 +26,6 @@ public class RandomGeneratorClass {
     }
 
 }
+
+
+

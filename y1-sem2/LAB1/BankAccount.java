@@ -21,6 +21,9 @@ public class BankAccount {
     }
 
     public void getBalance() {
-        System.out.println(accountHolderName + ", Your balance is: " + balance);
+        if (balance < 0) {
+            balance = 0;
+            System.out.println(accountHolderName + ", Your balance is: " + balance);
+        } else System.out.println(accountHolderName + ", Your balance is: " + balance);
     }
 }
