@@ -22,6 +22,7 @@ public class Student {
         return avgScore = (double) scoreSum / 3;
     }
 
+    // Adjust this function to be reusable for single char values
     public char[] determineGrade() {
         char[] testGrades = new char[testScores.length];
         for (int scr = 0; scr < testScores.length; scr++) {
@@ -55,11 +56,11 @@ public class Student {
 
         Student s1 = new Student("Zipora", arrOfScores);
         double s1_avgScore = s1.calculateAverage();
-        System.out.println(s1_avgScore);
+        System.out.println(s1.name + "'s Average score: " + (Math.round(s1_avgScore * 100.0) / 100.0) + ", which is an: ");
 
         char[] s1_grades = s1.determineGrade();
-        for (char grd : s1_grades) {
-            System.out.println(grd);
+        for (int s = 0; s < arrOfScores.length; s++) {
+            System.out.println(arrOfScores[s] + " is an " + s1_grades[s]);
         }
     }
 }
