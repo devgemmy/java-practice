@@ -19,30 +19,50 @@ public class Student {
             }
         }
         double avgScore;
-        return avgScore = (double) scoreSum / 3;
+        avgScore = (double) scoreSum / 3;
+
+        return avgScore;
     }
 
-    // Adjust this function to be reusable for single char values
-    public char[] determineGrade() {
-        char[] testGrades = new char[testScores.length];
-        for (int scr = 0; scr < testScores.length; scr++) {
-            if (testScores[scr] >= 90 && testScores[scr] <= 100) {
-                testGrades[scr] = 'A';
-            } else if (testScores[scr] >= 80 && testScores[scr] <= 89) {
-                testGrades[scr] = 'B';
-            } else if (testScores[scr] >= 70 && testScores[scr] <= 79) {
-                testGrades[scr] = 'C';
-            } else if (testScores[scr] >= 60 && testScores[scr] <= 69) {
-                testGrades[scr] = 'D';
-            } else if (testScores[scr] <= 59) {
-                testGrades[scr] = 'F';
-            } else if (testScores[scr] > 100) {
-                testGrades[scr] = '-';
-                System.out.println("Error: Your grade is out of range.");
-            }
+    public char determineGrade(double avgScore) {
+        char grade = '-';
+        if (avgScore >= 90 && avgScore <= 100) {
+            grade = 'A';
+        } else if (avgScore >= 80 && avgScore <= 89) {
+            grade = 'B';
+        } else if (avgScore >= 70 && avgScore <= 79) {
+            grade = 'C';
+        } else if (avgScore >= 60 && avgScore <= 69) {
+            grade = 'D';
+        } else if (avgScore <= 59) {
+            grade = 'F';
+        } else if (avgScore > 100) {
+            System.out.println("Error: Your grade is out of range.");
         }
-        return testGrades;
+
+        return grade;
     }
+
+//    public char[] determineAllGrades() {
+//        char[] testGrades = new char[testScores.length];
+//        for (int scr = 0; scr < testScores.length; scr++) {
+//            if (testScores[scr] >= 90 && testScores[scr] <= 100) {
+//                testGrades[scr] = 'A';
+//            } else if (testScores[scr] >= 80 && testScores[scr] <= 89) {
+//                testGrades[scr] = 'B';
+//            } else if (testScores[scr] >= 70 && testScores[scr] <= 79) {
+//                testGrades[scr] = 'C';
+//            } else if (testScores[scr] >= 60 && testScores[scr] <= 69) {
+//                testGrades[scr] = 'D';
+//            } else if (testScores[scr] <= 59) {
+//                testGrades[scr] = 'F';
+//            } else if (testScores[scr] > 100) {
+//                testGrades[scr] = '-';
+//                System.out.println("Error: Your grade is out of range.");
+//            }
+//        }
+//        return testGrades;
+//    }
 
     public static void main(String[] args) {
         int[] arrOfScores = new int[3];
@@ -56,11 +76,16 @@ public class Student {
 
         Student s1 = new Student("Zipora", arrOfScores);
         double s1_avgScore = s1.calculateAverage();
-        System.out.println(s1.name + "'s Average score: " + (Math.round(s1_avgScore * 100.0) / 100.0) + ", which is an: ");
 
-        char[] s1_grades = s1.determineGrade();
-        for (int s = 0; s < arrOfScores.length; s++) {
-            System.out.println(arrOfScores[s] + " is an " + s1_grades[s]);
+        if (s1_avgScore > 100) {
+            System.out.println(s1.name + "'s Average score is" + (Math.round(s1_avgScore * 100.0) / 100.0) + ", which is out of range.");
+        } else {
+            System.out.println(s1.name + "'s Average score: " + (Math.round(s1_avgScore * 100.0) / 100.0) + ", which is " + s1.determineGrade(s1_avgScore));
         }
+
+        // char[] s1_grades = s1.determineAllGrades();
+        // for (int s = 0; s < arrOfScores.length; s++) {
+        //    System.out.println(arrOfScores[s] + " is an " + s1_grades[s]);
+        // }
     }
 }
