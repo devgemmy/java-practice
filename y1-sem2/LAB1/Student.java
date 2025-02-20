@@ -66,6 +66,7 @@ public class Student {
 
     public static void main(String[] args) {
         int[] arrOfScores = new int[3];
+        int[] secArrOfScores = new int[3];
 
         Scanner sc = new Scanner(System.in);
 
@@ -87,5 +88,19 @@ public class Student {
         // for (int s = 0; s < arrOfScores.length; s++) {
         //    System.out.println(arrOfScores[s] + " is an " + s1_grades[s]);
         // }
+
+        for (int j = 0; j < secArrOfScores.length; j++) {
+            System.out.print("Enter your test score" + (j + 1) + ": ");
+            secArrOfScores[j] = sc.nextInt();
+        }
+
+        Student s2 = new Student("Zoey", secArrOfScores);
+        double s2_avgScore = s2.calculateAverage();
+
+        if (s2_avgScore > 100) {
+            System.out.println(s2.name + "'s Average score is" + (Math.round(s2_avgScore * 100.0) / 100.0) + ", which is out of range.");
+        } else {
+            System.out.println(s2.name + "'s Average score: " + (Math.round(s2_avgScore * 100.0) / 100.0) + ", which is " + s2.determineGrade(s2_avgScore));
+        }
     }
 }
