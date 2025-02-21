@@ -1,7 +1,9 @@
+package Exercise3;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class MainClass {
+public class MainClass3 {
     public static void main(String[] args) {
         RandomGeneratorClass rgInstance = new RandomGeneratorClass("RG1");
 
