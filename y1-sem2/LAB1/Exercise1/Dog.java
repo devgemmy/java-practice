@@ -1,3 +1,5 @@
+package Exercise1;
+
 class Dog {
     // Instance variables
     private String name;
