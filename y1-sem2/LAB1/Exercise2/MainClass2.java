@@ -1,4 +1,6 @@
-public class Exercise2 {
+package Exercise2;
+
+public class MainClass2 {
     public static void main(String[] args) {
         BankAccount currentAccount = new BankAccount(506211, "Tony Stark");
         BankAccount savingsAccount = new BankAccount(134070, "Alex");
