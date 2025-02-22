@@ -27,6 +27,7 @@ public class Employee {
         Employee e5 = new Employee("Bob", 12, 15.0);
 
         Employee[] employees = {e1, e2, e3, e4, e5};
+        // Add the scanner
 
 
         for (Employee emp : employees) {
