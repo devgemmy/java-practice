@@ -7,6 +7,10 @@
       <sourceFolder url="file://$MODULE_DIR$/LAB2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LAB3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LAB4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DataFiles" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/GP-Doccode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaNotes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MockExam" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
