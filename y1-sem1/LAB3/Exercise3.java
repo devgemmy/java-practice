@@ -64,7 +64,7 @@ public class Exercise3 {
                 }
             }
         }
-        System.out.println("");
+        System.out.println(" ");
 
         // 7) ***+++---***+++---
         for (int i = 0; i < 2; i++) {
