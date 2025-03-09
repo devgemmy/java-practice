@@ -4,35 +4,49 @@ import java.util.Scanner;
 
 public class UniversitySystem {
     public static void main(String[] args) {
+        int inputCount;
+        Scanner scInput = new Scanner(System.in);
         Student[] brunelStudents = new Student[3];
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Type 'Finish' to exit the program. Type 'Done' to finish adding courses.");
+        for (inputCount = 0; inputCount < brunelStudents.length; inputCount++) {
+            System.out.print("Enter name for student " + (inputCount + 1) + ": ");
+            String fullName = scInput.nextLine();
+            System.out.print("Enter 6-digit student ID of " + fullName + ": ");
+            int studentID = scInput.nextInt();
+            scInput.nextLine();
+            brunelStudents[inputCount] = new Student(fullName, studentID);
+        }
 
-        while (true) {
-            if (input.nextLine().equalsIgnoreCase("finish")) {
-                break;
-            } else {
-                System.out.print("Enter your full name: ");
-                String fullName = input.nextLine();
-
-                System.out.print("Enter your student ID: ");
-                int studentID = input.nextInt();
-
-                System.out.print("How many courses are you taking? : ");
-                int courseAmount = input.nextInt();
-
-                System.out.print("Enter your courses: ");
-
-                while (true) {
-                    if (input.nextLine().equalsIgnoreCase("done")) {
-                        break;
-                    } else {
-                        Student sDetails = new Student(fullName, studentID, courseAmount);
-                        sDetails.registerCourse(input.nextLine());
-                    }
-                }
+        for (inputCount = 0; inputCount < brunelStudents.length; inputCount++) {
+            System.out.println("Enter 5 courses for " + brunelStudents[inputCount].name + "(Student " + (inputCount + 1) + "). Type 'Done' to finish adding courses");
+            int count = 0;
+            while (count < 5) {
+                System.out.print("Course " + (count + 1) + ": ");
+                String cour = scInput.nextLine();
+                if (cour.equalsIgnoreCase("Done")) break;
+                brunelStudents[inputCount].registerCourse(cour);
+                count++;
+                if (count == 5) System.out.println("Course Limit reached for " + brunelStudents[inputCount].name + "\n");
             }
+        }
+
+        for (Student bruStud : brunelStudents) {
+            bruStud.displayCourses();
+        }
+
+        System.out.print("Enter Student Name to drop a course: ");
+        String studentName = scInput.nextLine();
+        System.out.print("Enter the course to drop: ");
+        String courseToDrop = scInput.nextLine();
+
+        for (Student bruStud : brunelStudents) {
+            if (bruStud.name.equals(studentName)) {
+                bruStud.dropCourse(courseToDrop);
+            }
+        }
+
+        for (Student bruStud : brunelStudents) {
+            bruStud.displayCourses();
         }
     }
 }
