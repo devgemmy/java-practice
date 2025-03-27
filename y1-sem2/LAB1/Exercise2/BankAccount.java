@@ -1,14 +1,14 @@
 package Exercise2;
 
-public class BankAccount {
+class BankAccount {
     private int accountNumber;
     private String accountHolderName;
     private double balance;
 
     public BankAccount(int acctNum, String acctHName) {
-        accountNumber = acctNum;
-        accountHolderName = acctHName;
-        balance = 0;
+        this.accountNumber = acctNum;
+        this.accountHolderName = acctHName;
+        this.balance = 0;
     }
 
     public void deposit(double amount) {

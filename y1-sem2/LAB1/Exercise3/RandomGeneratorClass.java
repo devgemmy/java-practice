@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class RandomGeneratorClass {
+class RandomGeneratorClass {
     private String name;
 
     public RandomGeneratorClass(String naming) {
-        name = naming;
+        this.name = naming;
     }
 
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package Exercise5;
 
 import java.util.ArrayList;
 
-public class Library {
+class Library {
     private final ArrayList<Book> booksList = new ArrayList<Book>();
 
     // Getters

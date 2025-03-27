@@ -8,9 +8,9 @@ class Dog {
 
     // Constructor
     public Dog(String nm, String brd, int ag) {
-        name = nm;
-        breed = brd;
-        age = ag;
+        this.name = nm;
+        this.breed = brd;
+        this.age = ag;
     }
 
     public void bark() {

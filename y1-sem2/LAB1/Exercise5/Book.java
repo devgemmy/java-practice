@@ -1,16 +1,16 @@
 package Exercise5;
 
-public class Book {
+class Book {
     String title;
     String author;
     int book_id;
     boolean isAvailable;
 
     public Book(String ttl, String auth, boolean isThere, int ISBN) {
-        title = ttl;
-        author = auth;
-        book_id = ISBN;
-        isAvailable = isThere;
+        this.title = ttl;
+        this.author = auth;
+        this.book_id = ISBN;
+        this.isAvailable = isThere;
     }
 
     // Methods

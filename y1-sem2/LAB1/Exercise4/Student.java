@@ -7,8 +7,8 @@ public class Student {
     private final int[] testScores;
 
     public Student(String nm, int[] tscs) {
-        name = nm;
-        testScores = tscs;
+        this.name = nm;
+        this.testScores = tscs;
     }
 
     public double calculateAverage() {
