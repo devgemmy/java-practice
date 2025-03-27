@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exercise8 {
+public class Lab2Exercise8 {
 
     public static void main(String[] args) {
         System.out.println("\n Lab 3 - Exercise 8 \n");

@@ -1,5 +1,5 @@
 
-public class Exercise2 {
+public class Lab2Exercise2 {
 
 	public static void main(String[] args) {
 		int x = 100, y = 204, c = -204;

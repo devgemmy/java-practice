@@ -1,5 +1,5 @@
 
-public class Exercise6 {
+public class Lab3Exercise6 {
 
     public static void main(String[] args) {
         System.out.println("Exercise 6" + "\n");

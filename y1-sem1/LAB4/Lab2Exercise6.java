@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercise6 {
+public class Lab2Exercise6 {
 
     public static void main(String[] args) {
         System.out.println("Lab 4 - Exercise 6 \n");

@@ -1,5 +1,5 @@
 
-public class Exercise4 {
+public class Lab2Exercise4 {
 
     public static void main(String[] args) {
         System.out.println("Exercise 4: While Loop version" + "\n");

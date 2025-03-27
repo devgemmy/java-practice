@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/GP-Doccode" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JavaNotes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MockExam" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exam" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
