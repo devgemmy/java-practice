@@ -1,6 +1,7 @@
 package E1UCRS;
 
 import java.util.Scanner;
+// University Course Registration System
 
 public class UniversitySystem {
     public static void main(String[] args) {
