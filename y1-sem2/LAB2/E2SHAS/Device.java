@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public class Device {
     private int deviceID;
     protected String deviceName;
-    public boolean status;
+    public boolean status = false;
 
-    Device(int deviceID, String deviceName) {
+    Device(int deviceID, String deviceName, boolean stat) {
         this.deviceID = deviceID;
         this.deviceName = deviceName;
-        this.status = false;
+        this.status = stat;
     }
 
     public void turnOn() {
