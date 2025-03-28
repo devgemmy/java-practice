@@ -1,6 +1,7 @@
 package E4STMS;
 
 public class TrafficControlSystem {
+    private int passengerCount;
     int speedLimit = 4000;
 
     public static void main(String[] args) {
