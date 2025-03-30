@@ -3,6 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
+//import java.util.HashSet;
 
 public class Question4 {
     public static void main(String[] args) throws IOException {
@@ -33,3 +34,44 @@ public class Question4 {
         fr.close();
     }
 }
+
+
+
+//
+//public class Main {
+//
+//    private static class Pair<Integer, String, Double> {
+//        private final Integer id;
+//        private final String name;
+//        private final Double price;
+//
+//        public Pair(Integer id, String name, Double price) {
+//            this.id = id;
+//            this.name = name;
+//            this.price = price;
+//        }
+//
+//        public Integer getID() {
+//            return id;
+//        }
+//
+//        public String getName() {
+//            return name;
+//        }
+//
+//        public Double getPrice() {
+//            return name;
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//
+//
+//
+//        Pair<Integer, String, Double> details = new Pair<Integer, String, Double>(900, "Dinah", 50.78);
+//
+//
+//        System.out.println(details.getID() + details.getName() + details.getPrice());
+//
+//    }
+//}

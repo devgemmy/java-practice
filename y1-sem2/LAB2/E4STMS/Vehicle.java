@@ -3,17 +3,18 @@ package E4STMS;
 public class Vehicle {
     private String plateNumber;
     protected String vehicleType;
-    public double speed = 0.0;
+    public double speed;
     private double fineAmount;
 
-    public Vehicle(String plateNumber, String vehicleType, double speed) {
+    public Vehicle(String plateNumber, String vehicleType) {
         this.plateNumber = plateNumber;
         this.vehicleType = vehicleType;
-        this.speed = speed;
+        this.speed = 0.0;
     }
 
     public void accelerate(double amount) {
         this.speed += amount;
+        // until speed limit (100km/h) is reached.
     }
 
     protected void applyBrake(double amount) {
