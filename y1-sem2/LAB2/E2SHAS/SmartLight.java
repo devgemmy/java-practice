@@ -12,6 +12,7 @@ public class SmartLight extends Device {
     public void setBrightness(int level) {
         if (level < 0 || level > 100) {
             System.out.println("Brightness level is inapplicable. It has to be between 0 - 100");
+            // System.out.println("Device Name: " + this.deviceName);
         } else {
             this.brightnessLevel = level;
         }

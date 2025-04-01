@@ -24,6 +24,7 @@ public class Device {
     protected void displayStatus() {
         System.out.println(this.status);
     }
+
     // A private method to log device state changes.
     private void logOperation(String operation) {
         ArrayList<Boolean> statusLog = new ArrayList<Boolean>();

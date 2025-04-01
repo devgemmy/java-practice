@@ -1,7 +1,8 @@
 package E4STMS;
 
 public class Vehicle {
-    private String plateNumber;
+    //private String plateNumber;
+    String plateNumber;
     protected String vehicleType;
     public double speed;
     private double fineAmount;
@@ -14,14 +15,22 @@ public class Vehicle {
 
     public void accelerate(double amount) {
         this.speed += amount;
+        issueFine();
         // until speed limit (100km/h) is reached.
     }
 
     protected void applyBrake(double amount) {
         this.speed -= amount;
+        if (this.speed < 0) {
+            this.speed = 0;
+        }
     }
 
     private void issueFine() {
-        fineAmount += speed * 0.2;
+        double speedLimit = vehicleType.equalsIgnoreCase("Car") ? 60.0 : 40.0;
+        if (speed > speedLimit) {
+            fineAmount = (speed - speedLimit) * 10;
+            System.out.println("Fine: " + fineAmount);
+        }
     }
 }

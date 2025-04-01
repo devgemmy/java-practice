@@ -20,6 +20,10 @@ public class Car extends Vehicle{
     }
 
     public void displayCarDetails() {
-        System.out.print("Car Plate number: " + plateNumber);
+        System.out.println("Car Plate number: " + this.plateNumber);
+        // Error: make Vehicle.plateNumber package-private.
+        System.out.println("Vehicle Type: " + this.vehicleType);
+        System.out.println("Passenger Count: " + this.passengerCount);
+        System.out.println("Current Speed: " + this.speed + "km/h \n=========================" );
     }
 }
